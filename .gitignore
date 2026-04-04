@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Data files (too large for git)
+data/
+*.h5
+*.hdf5
+
+# Big Data output
+bigdata/output/
+bigdata/flume/spool/*.csv
+
+# Documents (submitted separately)
+docs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual env
+venv/
+.env
