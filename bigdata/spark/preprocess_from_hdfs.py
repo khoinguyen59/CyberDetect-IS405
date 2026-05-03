@@ -69,6 +69,7 @@ def preprocess(spark, input_path, output_path, local_output_path,
 
     # -----------------------------------------------------------------------
     # Step 1: Load data (Algorithm 1, step 1)
+    # Supports: single CSV file or folder of CSVs (e.g. Flume output)
     # -----------------------------------------------------------------------
     print(f"[Spark] Loading data from: {input_path}")
     df = spark.read.csv(input_path, header=True, inferSchema=True)
