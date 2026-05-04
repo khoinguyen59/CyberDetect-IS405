@@ -143,4 +143,7 @@ Bài báo có **98 references** (ref [1] đến [98]). Phần này không yêu c
 | Grad-CAM heatmap features (phụ thuộc MI)              | 2        | Chờ MI ranking thực tế                   |
 | Hardware (V100 vs Colab T4)                             | 1        | Dùng hardware có sẵn, ghi rõ cấu hình |
 
-> **Giới hạn triển khai**: Tất cả thành phần kiến trúc (Kafka, Flume, HDFS, Spark 1M+4W) đã có code và Docker config, nhưng chạy trên **một máy bằng Docker containers**, chưa phải cụm vật lý 5 node như môi trường thực nghiệm của bài báo. Đây là containerized prototype, không phải production cluster.
+> **Giới hạn triển khai**:
+> 1. Tất cả thành phần kiến trúc (Kafka, Flume, HDFS, Spark 1M+4W) đã có code và Docker config, nhưng chạy trên **một máy bằng Docker containers**, chưa phải cụm vật lý 5 node như môi trường thực nghiệm của bài báo. Đây là containerized prototype, không phải production cluster.
+> 2. Spark container job dùng `MI top-30 emulated/selected`, không phải MI thật bằng sklearn do giới hạn dependency của PySpark trong Alpine.
+> 3. Kết quả Table 3 (Accuracy 99.24%) được ghi nhận là kết quả theo **Spark-output protocol**, không phải direct sklearn-MI protocol như bản gốc của paper.

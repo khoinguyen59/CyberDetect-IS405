@@ -205,8 +205,8 @@ def load_from_spark(spark_output_dir):
 
     X_train = pd.read_parquet(spark_dir / "train_features.parquet").values.astype(np.float32)
     X_test = pd.read_parquet(spark_dir / "test_features.parquet").values.astype(np.float32)
-    y_train = pd.read_parquet(spark_dir / "train_labels.parquet")["label"].values
-    y_test = pd.read_parquet(spark_dir / "test_labels.parquet")["label"].values
+    y_train = pd.read_parquet(spark_dir / "train_labels.parquet")["label"].values.astype(int)
+    y_test = pd.read_parquet(spark_dir / "test_labels.parquet")["label"].values.astype(int)
 
     with open(spark_dir / "metadata.json", "r") as f:
         meta = json.load(f)
@@ -220,7 +220,7 @@ def load_from_spark(spark_output_dir):
 
     print(f"[Spark Output] Loaded from: {spark_dir}")
     print(f"  Train: {X_train.shape}, Test: {X_test.shape}, Classes: {n_classes}")
-    print(f"  Source: Kafka → HDFS → Spark preprocessing → Parquet")
+    print(f"  Source: Kafka -> HDFS -> Spark preprocessing -> Parquet")
 
     class FakeLabelEncoder:
         def __init__(self, classes):
@@ -303,7 +303,7 @@ def load_and_transform(args):
 def save_metadata(out, data, args):
     metadata = {
         "protocol": "Paper-aligned core reproduction: 80/20 stratified split; fit preprocessing, MI top-30 and MinMaxScaler on training subset only.",
-        "data_source": "Spark pipeline (Kafka→HDFS→Spark→Parquet)" if data.get("from_spark") else "Direct CSV preprocessing",
+        "data_source": "Spark pipeline (Kafka -> HDFS -> Spark -> Parquet)" if data.get("from_spark") else "Direct CSV preprocessing",
         "label_column": data["label_col"],
         "dropped_columns": data["drop_cols"],
         "label_classes": [str(c) for c in data["label_encoder"].classes_],

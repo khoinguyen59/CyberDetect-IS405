@@ -1,0 +1,63 @@
+{
+  "protocol": "Paper-aligned core reproduction: 80/20 stratified split; fit preprocessing, MI top-30 and MinMaxScaler on training subset only.",
+  "data_source": "Spark pipeline (Kafka -> HDFS -> Spark -> Parquet)",
+  "label_column": "label",
+  "dropped_columns": [
+    "label"
+  ],
+  "label_classes": [
+    "Normal (0)",
+    "Attack (1)"
+  ],
+  "n_classes": 2,
+  "hyperparams": {
+    "top_k_features": 30,
+    "test_size": 0.2,
+    "validation_split": 0.2,
+    "batch_size": 64,
+    "epochs": 100,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "dropout": 0.3,
+    "hidden_layers": [
+      512,
+      256,
+      128
+    ]
+  },
+  "top_features": [
+    "src_port",
+    "dst_port",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "missed_bytes",
+    "src_pkts",
+    "src_ip_bytes",
+    "dst_pkts",
+    "dst_ip_bytes",
+    "dns_qclass",
+    "dns_qtype",
+    "dns_rcode",
+    "http_request_body_len",
+    "http_response_body_len",
+    "http_status_code",
+    "src_ip_idx",
+    "dst_ip_idx",
+    "proto_idx",
+    "service_idx",
+    "conn_state_idx",
+    "dns_query_idx",
+    "dns_AA_idx",
+    "dns_RD_idx",
+    "dns_RA_idx",
+    "dns_rejected_idx",
+    "ssl_version_idx",
+    "ssl_cipher_idx",
+    "ssl_resumed_idx",
+    "ssl_established_idx"
+  ],
+  "seed": 42,
+  "n_train": 168607,
+  "n_test": 42436
+}

@@ -1,4 +1,4 @@
-# CyberDetect-MLP - Paper-Aligned Run Guide
+﻿# CyberDetect-MLP - Paper-Aligned Run Guide
 
 This is the main source folder to upload to Google Drive. Do not use old `CyberDetect-Phase2` or `CyberDetect-Phase3` folders for the paper reproduction run.
 
@@ -61,11 +61,12 @@ The extension notebooks (`07` to `10`) are not required for this paper-aligned r
 Run these Colab notebooks in order:
 
 ```text
-notebooks/01_Data_Preprocessing_MI.ipynb
-notebooks/02_Table3_Model_Baselines.ipynb
-notebooks/03_Ablation_Study.ipynb
-notebooks/04_XAI_Paper_Model.ipynb
+notebooks/01_Preprocessing_MI_FeatureSelection.ipynb
+notebooks/02_Table3_Baseline_Comparison.ipynb
+notebooks/03_Table5_Ablation_Study.ipynb
+notebooks/04_Explainable_AI_SHAP_IG.ipynb
 notebooks/05_Final_Audit_Checklist.ipynb
 ```
 
 The old extension/result notebooks were archived outside this source folder.
+
