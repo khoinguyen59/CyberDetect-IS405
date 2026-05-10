@@ -1,0 +1,4 @@
+Streaming Rate (events/sec),Samples Tested,Inference Time per Sample (ms),Total Batch Latency (ms),Throughput (events/sec)
+10000,10000,0.1011,1011.4,9887
+50000,42209,0.0711,3000.7,14066
+100000,42209,0.0532,2243.9,18810

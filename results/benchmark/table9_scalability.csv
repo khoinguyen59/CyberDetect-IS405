@@ -1,0 +1,4 @@
+Streaming Rate (events/sec),Samples Tested,Throughput (events/sec),CPU Utilization (%),GPU Utilization (%),Memory Usage (%)
+10000,10000,10572,15.1,,4.5
+50000,42209,14149,16.2,,4.5
+100000,42209,17786,26.9,,4.6
