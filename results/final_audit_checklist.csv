@@ -1,0 +1,11 @@
+artifact,status,size_bytes
+data/colab_processed/X_train_top30.parquet,OK,2691991
+data/colab_processed/X_test_top30.parquet,OK,750796
+models/colab_cyberdetect_mlp.h5,OK,2267168
+models/colab_preprocessing_metadata.json,OK,1173
+models/colab_preprocessor.joblib,OK,12523
+results/colab_table3_metrics.csv,OK,584
+results/colab_ablation_metrics.csv,OK,730
+results/colab_confusion_matrix.csv,OK,430
+results/xai/colab_shap_summary.png,OK,147360
+results/xai/colab_integrated_gradients.png,OK,66972
