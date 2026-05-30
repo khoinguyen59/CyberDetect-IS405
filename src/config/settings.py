@@ -18,3 +18,5 @@ EPOCHS = 100              # Paper Table 2: "Max 100 epochs" (line 989, 1010)
 LEARNING_RATE = 0.001
 PATIENCE = 10             # Paper Table 2: "patience = 10" (line 989, 1010)
 VALIDATION_SPLIT = 0.2    # For EarlyStopping inside model.fit() when using 80/20 outer split
+
+# 
