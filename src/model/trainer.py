@@ -157,3 +157,5 @@ def plot_training_history(history, output_dir="results/training"):
     plt.savefig(os.path.join(output_dir, "fig6_loss.png"), dpi=150)
     plt.close()
     print(f"[OK] Fig 6 da duoc luu tai {output_dir}/fig6_loss.png")
+
+# 
