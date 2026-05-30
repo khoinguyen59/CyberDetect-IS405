@@ -1,0 +1,2 @@
+Dataset,SampleRows,TopKFeatures,Resampling,Accuracy,Precision,Recall,F1-Score,ROC-AUC,TrainingTimeSec
+CSE-CIC-IDS2018,2000,30,smote_enn,0.2575,0.2575,1.0,0.4095427435387674,0.5178647314569644,2.985335350036621
