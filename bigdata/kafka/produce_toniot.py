@@ -100,3 +100,5 @@ if __name__ == "__main__":
         print(f"[ERROR] Kafka connection failed: {e}")
         print("  Make sure Docker containers are running: docker-compose up -d")
         sys.exit(1)
+
+# 
