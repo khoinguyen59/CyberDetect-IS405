@@ -59,3 +59,5 @@ Khi chạy thực nghiệm thật trên Colab, vui lòng lưu ý hai điểm qua
    * *Giải thích*: Có sự khác biệt lớn so với con số 98.87% công bố trong bài báo gốc. Qua quá trình kiểm toán mã nguồn của bài báo gốc, nhóm phát hiện tác giả bài báo gốc công bố làm phân loại đa lớp (Multiclass) nhưng trong mã nguồn thực tế lại cấu hình bài toán nhị phân (Binary - sigmoid + binary_crossentropy). Nhóm đã sửa đổi và thực hiện chuẩn hóa đúng bài toán đa lớp (softmax + categorical_crossentropy) theo đúng Methodology của bài báo. Độ chính xác ~74% là kết quả phản ánh **trung thực, khoa học** của bài toán đa lớp trên tập dữ liệu TON_IoT.
 2. **Hiện tượng mất cân bằng cực đoan trong Cross-dataset (Notebook 08):**
    * Tập dữ liệu BoT-IoT sau khi lấy mẫu có tỷ lệ lệch lớp rất cao (chỉ có vài chục mẫu Normal trên hàng trăm nghìn mẫu Attack). Vì vậy độ chính xác (Accuracy) tổng thể sẽ luôn tiệm cận 99.9%. Nhóm khuyến nghị giảng viên đánh giá hiệu năng dựa trên **F1-Score và Recall của lớp Normal** trong bảng báo cáo chi tiết `classification_report`, tránh bị đánh lừa bởi chỉ số Accuracy tổng thể.
+
+# 
