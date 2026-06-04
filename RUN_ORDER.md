@@ -61,3 +61,4 @@ Khi chạy thực nghiệm thật trên Colab, vui lòng lưu ý hai điểm qua
    * Tập dữ liệu BoT-IoT sau khi lấy mẫu có tỷ lệ lệch lớp rất cao (chỉ có vài chục mẫu Normal trên hàng trăm nghìn mẫu Attack). Vì vậy độ chính xác (Accuracy) tổng thể sẽ luôn tiệm cận 99.9%. Nhóm khuyến nghị giảng viên đánh giá hiệu năng dựa trên **F1-Score và Recall của lớp Normal** trong bảng báo cáo chi tiết `classification_report`, tránh bị đánh lừa bởi chỉ số Accuracy tổng thể.
 
 # 
+# 
