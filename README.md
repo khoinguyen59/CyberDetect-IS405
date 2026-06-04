@@ -122,3 +122,4 @@ Thư viện: `pip install tensorflow scikit-learn imbalanced-learn pandas numpy 
 
 # 
 # 
+# 
